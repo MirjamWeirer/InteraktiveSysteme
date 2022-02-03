@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="494" Width="943">
+    <Grid >
+        <TextBlock Width="100">Hello</TextBlock>
+        <Image Source="C:\Users\mirja\OneDrive\spö-sj-vaust\dani\Gewalt2.png" RenderTransformOrigin="0.475,0.354" Margin="0,0,159,162" Width="500" Height="373"></Image>
+        <!-- Element Schreibweise-->
+        <Button >SJ
+            <Button.Margin>86,310,369,113</Button.Margin>
+        </Button>
+        <!-- Attrivute Schreibweise, "einfache Werte"-->
+        <Button Background="DarkViolet" Content="Stopp Femizide" Margin="0,404,111,0"></Button>
+        <!-- Content ist default Schreibweise (This is Violet)-->
+        <Button FontSize="20" Background="#FF861F86" Margin="304,364,10,54">This is Violet</Button>
+        <Menu Margin="0,0,551,418">
+            <MenuItem>Datei</MenuItem>
+
+        </Menu>
+
+    </Grid> 
+</Window>
