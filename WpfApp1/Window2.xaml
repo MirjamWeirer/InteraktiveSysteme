@@ -7,9 +7,21 @@
         mc:Ignorable="d"
         Title="Window2" Height="450" Width="800">
     <StackPanel>
-        <Canvas>
-            <!-- Margin und Padding besser im Canvas angeben-->
+        <!--<Canvas>
+            Margin und Padding besser im Canvas angeben
             <Button Margin="10,20,0,0" Padding="10,10,10,10">Test</Button>
-        </Canvas>
+            <RepeatButton Click="RepeatButton_Click" Margin="50,40,30,30"> Hochzählen</RepeatButton>
+        </Canvas>-->
+        <Label Name="lblNumber" Grid.RowSpan="2" Content="0"
+               VerticalAlignment="Center" MinWidth="40"  />
+        <RepeatButton Name="btnUp" Grid.Column="1" Click="btnUp_Click">
+            <Polygon Margin="4,0" Points="3,0 6,6 0,6 3,0" 
+                    Stroke="Black" Fill="Black"/>
+        </RepeatButton>
+        <RepeatButton Name="btnDown" Grid.Row="1" Grid.Column="1" 
+                      Click="btnDown_Click">
+            <Polygon Margin="4,0" Points="3,6 6,0 0,0 3,6" 
+                   Stroke="Black" Fill="Black"/>
+        </RepeatButton>
     </StackPanel>
 </Window>

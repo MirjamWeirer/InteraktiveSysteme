@@ -23,5 +23,21 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        int hoch = 0;
+        private void RepeatButton_Click(object sender, RoutedEventArgs e)
+        {
+            hoch++;
+            this.Title = "Wert von X " + hoch;
+        }
+
+        private void btnUp_Click(object sender, RoutedEventArgs e)
+        {
+            lblNumber.Content = Convert.ToInt32(lblNumber.Content.ToString()) + 1;
+        }
+        private void btnDown_Click(object sender, RoutedEventArgs e)
+        {
+            lblNumber.Content = Convert.ToInt32(lblNumber.Content.ToString()) - 1;
+        }
     }
 }
