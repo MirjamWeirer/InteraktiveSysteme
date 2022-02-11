@@ -36,5 +36,11 @@ namespace Collection_Databinding
             Buch b = new Buch() { Titel = "Steirerwahn", Autor = "Claudia Rossbacher", ISBAN = "978-3-8392-0198-5", Preis = 18.00, Ausgeliehen = false, Farbe = "Red" };
             bücherei.Bücher.Add(b);
         }
+
+        private void Neues_EBook(object sender, RoutedEventArgs e)
+        {
+            EBook eBook = new EBook() { Titel = "Zwei Handvoll Leben", Autor = "Katharina Fuchs", ISBAN = "978-3-426-45363-6", Ausgeliehen = false, Preis = 9.99, Farbe = "Yellow" };
+            bücherei.EBook.Add(eBook);
+        }
     }
 }

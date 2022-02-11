@@ -11,9 +11,25 @@
             <MenuItem Header="Buch">
                 <MenuItem Header="Neue" Click="Neu"/>
             </MenuItem>
+            <MenuItem Header="EBook">
+                <MenuItem Header="Neue" Click="Neues_EBook" />
+            </MenuItem>
         </Menu>
         <StatusBar DockPanel.Dock="Bottom"></StatusBar>
+        <TextBox>Bücher</TextBox>
         <ListBox ItemsSource="{Binding Bücher}" SelectedItem="{Binding AusgewähltesBuch}" DockPanel.Dock="Left">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Background="{Binding Farbe}">
+                        <TextBlock Text="{Binding Titel}"></TextBlock>
+                        <TextBlock Text="{Binding Autor}"></TextBlock>
+                        <CheckBox IsChecked="{Binding Ausgeliehen}"></CheckBox>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBox>EBook</TextBox>
+        <ListBox ItemsSource="{Binding EBook}" SelectedItem="{Binding AusgewähltesBuch}" DockPanel.Dock="Left">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Background="{Binding Farbe}">
