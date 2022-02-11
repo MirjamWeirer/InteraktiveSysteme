@@ -20,7 +20,7 @@ namespace EntityFrameworkConsoleSample
 
         public static void CreateDatabaseAddCustomer()
         {
-            CustomerContext ctx = new CustomerContext();
+            CoustomerContextV2 ctx = new CoustomerContextV2();
 
             Customer myFirstCustomer = new Customer();
             //myFirstCustomer.CustomerId -- Identitywert

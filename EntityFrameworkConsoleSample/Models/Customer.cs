@@ -14,5 +14,9 @@ namespace EntityFrameworkConsoleSample.Models
         public string Lastname { get; set; }
         public int Points { get; set; }
 
+        public string Nickname { get; set; }
+
+        public int PostalCode { get; set; }
+
     }
 }

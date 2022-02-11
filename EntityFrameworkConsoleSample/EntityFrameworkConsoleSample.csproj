@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\CustomerContext.cs" />
+    <Compile Include="Models\CoustomerContextV2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
