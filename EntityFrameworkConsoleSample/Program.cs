@@ -15,12 +15,31 @@ namespace EntityFrameworkConsoleSample
             //2. Code First: Entity Model - class Customer { CustomerId ...
             //3. CustomerContext : DBContext --- DBSet
             //CRUD
-            CreateDatabaseAddCustomer();
+            //CreateDatabaseAddCustomer();
+            ArbeitenMitContext();
+        }
+
+        public static void ArbeitenMitContext()
+        {
+            CoustomerContextV3 ctx = new CoustomerContextV3();
+            //Suche anhand von Primary Key --> nur ein Objekt als Return
+            var customerNr1 = ctx.Customers.Find(1);
+            customerNr1.Points = 5;
+
+            //beliebige Suche -- Liste
+            var customerJasi = ctx.Customers.Where(c => c.Firstname == "Jasi");
+
+            foreach(var jasi in customerJasi)
+            {
+                jasi.Points = 15;
+            }
+
+            ctx.SaveChanges();
         }
 
         public static void CreateDatabaseAddCustomer()
         {
-            CoustomerContextV2 ctx = new CoustomerContextV2();
+            CoustomerContextV3 ctx = new CoustomerContextV3();
 
             Customer myFirstCustomer = new Customer();
             //myFirstCustomer.CustomerId -- Identitywert

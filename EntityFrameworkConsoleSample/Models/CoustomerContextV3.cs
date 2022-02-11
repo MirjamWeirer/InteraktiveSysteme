@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EntityFrameworkConsoleSample.Models
 {
-    internal class CoustomerContextV2:DbContext
+    internal class CoustomerContextV3:DbContext
     {
         public DbSet<Customer> Customers { get; set; }
     }
