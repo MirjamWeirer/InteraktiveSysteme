@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Collection_Databinding.Model;
 
 namespace Collection_Databinding
 {
@@ -20,9 +21,20 @@ namespace Collection_Databinding
     /// </summary>
     public partial class MainWindow : Window
     {
+        Bücherei bücherei = null;
         public MainWindow()
         {
             InitializeComponent();
+
+            bücherei = new Bücherei();
+
+            this.DataContext = bücherei;
+        }
+
+        private void Neu(object sender, RoutedEventArgs e)
+        {
+            Buch b = new Buch() { Titel = "Steirerwahn", Autor = "Claudia Rossbacher", ISBAN = "978-3-8392-0198-5", Preis = 18.00, Ausgeliehen = false, Farbe = "Red" };
+            bücherei.Bücher.Add(b);
         }
     }
 }

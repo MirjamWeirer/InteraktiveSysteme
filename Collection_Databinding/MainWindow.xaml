@@ -6,7 +6,27 @@
         xmlns:local="clr-namespace:Collection_Databinding"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Buch">
+                <MenuItem Header="Neue" Click="Neu"/>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom"></StatusBar>
+        <ListBox ItemsSource="{Binding Bücher}" SelectedItem="{Binding AusgewähltesBuch}" DockPanel.Dock="Left">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Background="{Binding Farbe}">
+                        <TextBlock Text="{Binding Titel}"></TextBlock>
+                        <TextBlock Text="{Binding Autor}"></TextBlock>
+                        <CheckBox IsChecked="{Binding Ausgeliehen}"></CheckBox>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel Visibility="{Binding Sichtbar}">
+            <TextBox Text="{Binding AusgewähltesBuch.Titel}"/>
+            <TextBox Text="{Binding AusgewähltesBuch.Ausgeliehen}"/>
+        </StackPanel>
+    </DockPanel>
 </Window>
