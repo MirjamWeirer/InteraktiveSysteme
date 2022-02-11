@@ -27,14 +27,15 @@
                         <TextBox>Straße:</TextBox>
                         <TextBox>PLZ:</TextBox>
                         <TextBox>Ort:</TextBox>
-                        <ComboBox>
-                            <ComboBoxItem>Österreich</ComboBoxItem>
-                            <ComboBoxItem>Deutschland</ComboBoxItem>
-                            <ComboBoxItem>Italien</ComboBoxItem>
-                            <ComboBoxItem>Slowenien</ComboBoxItem>
-                        </ComboBox>
-                        <TextBox>Land</TextBox>
                     </UniformGrid>
+                    <ComboBox>
+                        <ComboBoxItem>Österreich</ComboBoxItem>
+                        <ComboBoxItem>Deutschland</ComboBoxItem>
+                        <ComboBoxItem>Italien</ComboBoxItem>
+                        <ComboBoxItem>Slowenien</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox>Land</TextBox>
+                    <ProgressBar Minimum="0" Maximum="100" Value="0" Height="25"/>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Lieferung" Background="#FFFFFBFB">
@@ -44,6 +45,7 @@
                         <RadioButton>Express</RadioButton>
                         <TextBox Margin="0,20,0,0" TextAlignment="Center">Liefertermin</TextBox>
                         <Calendar></Calendar>
+                        <ProgressBar Minimum="0" Maximum="100" Value="33" Height="25"/>
                     </StackPanel>
                 </TabItem.Content>
             </TabItem>
@@ -62,6 +64,7 @@
                                 </StackPanel>
                             </Button.ToolTip>
                         </Button>
+                        <ProgressBar Minimum="0" Maximum="100" Value="100" Height="25"/>
                     </StackPanel>
                 </TabItem.Content>
             </TabItem>

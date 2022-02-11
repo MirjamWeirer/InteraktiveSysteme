@@ -1,0 +1,21 @@
+﻿<Window x:Class="Brutto_Netto_Rechner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Brutto_Netto_Rechner"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <UniformGrid Columns="3" Rows="3">
+            <TextBlock >Netto</TextBlock>
+            <TextBlock >Produktart</TextBlock>
+            <TextBlock>Steuerbetrag</TextBlock>
+            <TextBox Text="{Binding Netto}"></TextBox>
+            <TextBox Text="{Binding Produktart}"></TextBox>
+            <TextBlock Text="{Binding Steuerbetrag}"></TextBlock>
+            <TextBlock>Brutto</TextBlock>
+            <TextBlock Text="{Binding Brutto}"></TextBlock>
+        </UniformGrid>
+    </StackPanel>
+</Window>
