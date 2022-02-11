@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityFrameworkConsoleSample.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,23 @@ namespace EntityFrameworkConsoleSample
             //2. Code First: Entity Model - class Customer { CustomerId ...
             //3. CustomerContext : DBContext --- DBSet
             //CRUD
+            CreateDatabaseAddCustomer();
+        }
+
+        public static void CreateDatabaseAddCustomer()
+        {
+            CustomerContext ctx = new CustomerContext();
+
+            Customer myFirstCustomer = new Customer();
+            //myFirstCustomer.CustomerId -- Identitywert
+            myFirstCustomer.Firstname = "Jasi";
+            myFirstCustomer.Lastname = "Feigel";
+            myFirstCustomer.Points = 12;
+
+            //Objekt dem DBSet hinzufügen
+            ctx.Customers.Add(myFirstCustomer);
+            //Objekt hat danach Zustand "Attached"
+            ctx.SaveChanges(); //Übertragt alle änderungen (Insert, Update, Deletes) an DB
         }
     }
 }
