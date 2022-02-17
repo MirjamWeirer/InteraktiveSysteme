@@ -1,0 +1,40 @@
+﻿<Window x:Class="Wiederholung17022022.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wiederholung17022022"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <!-- DataContext XAML oder Code-behind Ctor -->
+        <CheckBox Background="{Binding Farbe}" Content="{Binding Inhalt}" 
+                IsChecked="{Binding Markiert}"/>
+        <TextBox Text="{Binding Inhalt, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Click="Button_Click">Inhalt auf aktuelle Uhrzeit setzen</Button>
+        <TextBox x:Name="MyProgressValue">50</TextBox>
+        <ProgressBar Background="Red" Height="40" Value="{Binding ElementName=MyProgressValue, Path=Text}" Minimum="0" Maximum="100"/>
+        <ListBox ItemsSource="{Binding HeutigeMenues}" SelectedItem="{Binding AktuellAusgewaehlt}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding EssenProTagId}"/>
+                        <TextBlock Text="{Binding Bezeichnung}"/>
+                        <TextBlock Text="{Binding Preis}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Click="Button_Click_1">Neues Menü</Button>
+        <Button Click="Button_Click_2">Event simmulieren</Button>
+        <Button Click="DBInitialisierne_Click">DB Initialisieren</Button>
+        <TextBox Text="{Binding AktuellAusgewaehlt.Bezeichnung}"/>
+        <TextBox Text="{Binding AktuellAusgewaehlt.Preis}"/>
+        <Button Click="Speichern_Click">Speichern</Button>
+        <Button Click="EssenHinzufuegen_Click">Neues Essen</Button>
+
+        <StatusBar>
+            <StatusBarItem Content="{Binding IhreAuswahl}"></StatusBarItem>
+        </StatusBar>
+    </StackPanel>
+</Window>
