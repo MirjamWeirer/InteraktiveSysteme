@@ -1,0 +1,38 @@
+﻿<Window x:Class="Gesellschaftsspiele.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gesellschaftsspiele"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Neues Spiel hinzufügen" Click="NeuesSpiel_Click"></MenuItem>
+                <MenuItem Header="Speichern" Click="Speichern_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Click="Loeschen_Click">X</Button>
+        </ToolBar>
+
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem Content="{Binding StatusAnzeige}"></StatusBarItem>
+        </StatusBar>
+        <ListBox DockPanel.Dock="Left" ItemsSource="{Binding Gesellschaftspiele}" SelectedItem="{Binding Ausgewaehltesspiel}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Titel}"/>
+                        <TextBlock Text="{Binding Kategorie}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel>
+            <TextBox Text="{Binding Ausgewaehltesspiel.Titel, UpdateSourceTrigger=PropertyChanged }"></TextBox>
+            <Image Source="{Binding Ausgewaehltesspiel.Bild}"></Image>
+        </StackPanel>
+    </DockPanel>
+</Window>

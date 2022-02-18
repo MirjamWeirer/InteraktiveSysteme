@@ -1,0 +1,19 @@
+﻿<Window x:Class="Gesellschaftsspiele.NeuesGesellschaftsspiel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gesellschaftsspiele"
+        mc:Ignorable="d"
+        Title="NeuesGesellschaftsspiel" Height="450" Width="800">
+    <UniformGrid Rows="4" Columns="2">
+        <TextBlock>Titel</TextBlock>
+        <TextBox Text="{Binding Titel}"/>
+        <TextBlock>Kategorie</TextBlock>
+        <TextBox Text="{Binding Kategorie}"/>
+        <TextBlock>Bild</TextBlock>
+        <TextBox Text="{Binding Bild}"/>
+        <Button Click="SaveAndClose_Click">Speichern und Schließen</Button>
+
+    </UniformGrid>
+</Window>

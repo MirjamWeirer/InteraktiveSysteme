@@ -5,10 +5,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{629DCDEB-9CC5-4281-A6C8-E0F81C8DEC52}</ProjectGuid>
+    <ProjectGuid>{A11E178B-9830-4271-981E-DBC48C20ED11}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Filme</RootNamespace>
-    <AssemblyName>Filme</AssemblyName>
+    <RootNamespace>Gesellschaftsspiel</RootNamespace>
+    <AssemblyName>Gesellschaftsspiel</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -77,18 +77,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="NeuerFilm.xaml">
+    <Page Include="NeuesGesellschaftsspiel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\DonnerstagViewModel.cs" />
-    <Compile Include="Models\FilmeProTag.cs" />
-    <Compile Include="Models\FilmeRepository.cs" />
-    <Compile Include="Models\MyFilmeContext.cs" />
-    <Compile Include="NeuerFilm.xaml.cs">
-      <DependentUpon>NeuerFilm.xaml</DependentUpon>
+    <Compile Include="Model\Gesellschaftsspiel.cs" />
+    <Compile Include="Model\GesellschaftsspielContext.cs" />
+    <Compile Include="Model\GesellschaftsspielRepository.cs" />
+    <Compile Include="Model\GesellschaftsspielViewModel.cs" />
+    <Compile Include="NeuesGesellschaftsspiel.xaml.cs">
+      <DependentUpon>NeuesGesellschaftsspiel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -115,6 +115,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CrazyCoconuts.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Offiziersskat.jpg" />
+    <Resource Include="Images\Sic Bo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
