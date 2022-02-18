@@ -11,6 +11,7 @@
             <MenuItem Header="File">
                 <MenuItem Header="Neues Spiel hinzufügen" Click="NeuesSpiel_Click"></MenuItem>
                 <MenuItem Header="Speichern" Click="Speichern_Click"></MenuItem>
+                <MenuItem Header="Speichern" Click="Suchen_Click"></MenuItem>
             </MenuItem>
         </Menu>
         <ToolBar DockPanel.Dock="Top">

@@ -65,6 +65,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Suchwindow.xaml.cs">
+      <DependentUpon>Suchwindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -81,11 +84,16 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Suchwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Gesellschaftsspiel.cs" />
     <Compile Include="Model\GesellschaftsspielContext.cs" />
     <Compile Include="Model\GesellschaftsspielRepository.cs" />
+    <Compile Include="Model\GesellschaftsspielSucheViewModel.cs" />
     <Compile Include="Model\GesellschaftsspielViewModel.cs" />
     <Compile Include="NeuesGesellschaftsspiel.xaml.cs">
       <DependentUpon>NeuesGesellschaftsspiel.xaml</DependentUpon>

@@ -30,6 +30,20 @@ namespace Gesellschaftsspiele.Model
 
 
         }
+        public ObservableCollection<Gesellschaftsspiel> GetBySuchstring(string suche)
+        {
+            ObservableCollection<Gesellschaftsspiel> result =
+                new ObservableCollection<Gesellschaftsspiel>();
+
+            foreach (var spiel in ctx.Gesellschaftsspiele.Where(s => s.Titel.Contains(suche)))
+            {
+                result.Add(spiel);
+            }
+
+            return result;
+
+
+        }
 
         public ObservableCollection<Gesellschaftsspiel> GetAll()
         {

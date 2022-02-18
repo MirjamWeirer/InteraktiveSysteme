@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Gesellschaftsspiele.Model;
+
 
 namespace Gesellschaftsspiele
 {
@@ -63,6 +65,14 @@ namespace Gesellschaftsspiele
         {
             GesellschaftsspielViewModel vm = this.DataContext as GesellschaftsspielViewModel;
             vm.RemoveSpiel(vm.Ausgewaehltesspiel);
+        }
+
+        private void Suchen_Click(object sender, RoutedEventArgs e)
+        {
+            GesellschaftsspielSucheViewModel sucheVM = this.DataContext as GesellschaftsspielSucheViewModel;
+            Suchwindow suchwindow = new Suchwindow();
+            suchwindow.DataContext = sucheVM;
+            suchwindow.ShowDialog();
         }
     }
 }

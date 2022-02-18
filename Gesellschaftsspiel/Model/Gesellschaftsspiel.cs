@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Gesellschaftsspiele.Model
 {
     //Entity-Klasse
-   public class Gesellschaftsspiel : INotifyPropertyChanged
+    class Gesellschaftsspiel : INotifyPropertyChanged
     {
         public int GesellschaftsspielId { get; set; }
 

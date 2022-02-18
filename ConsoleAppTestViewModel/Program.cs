@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Gesellschaftsspiele.Model;
 
 namespace ConsoleAppTestViewModel
 {
@@ -10,7 +11,7 @@ namespace ConsoleAppTestViewModel
     {
         static void Main(string[] args)
         {
-            
+           //GesellschaftsspielViewModel vm = GesellschaftsspielViewModel();
         }
     }
 }
