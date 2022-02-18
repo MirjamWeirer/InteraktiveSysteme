@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filme", "Filme\Filme.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gesellschaftsspiele", "Gesellschaftsspiel\Gesellschaftsspiele.csproj", "{A11E178B-9830-4271-981E-DBC48C20ED11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppTestViewModel", "ConsoleAppTestViewModel\ConsoleAppTestViewModel.csproj", "{E6B80402-1B0E-4BBC-900C-B84044C691B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{A11E178B-9830-4271-981E-DBC48C20ED11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A11E178B-9830-4271-981E-DBC48C20ED11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A11E178B-9830-4271-981E-DBC48C20ED11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6B80402-1B0E-4BBC-900C-B84044C691B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6B80402-1B0E-4BBC-900C-B84044C691B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6B80402-1B0E-4BBC-900C-B84044C691B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6B80402-1B0E-4BBC-900C-B84044C691B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

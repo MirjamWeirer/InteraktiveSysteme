@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Gesellschaftsspiele.Model
 {
-    class GesellschaftsspielContext : DbContext
+    public class GesellschaftsspielContext : DbContext
     {
         public DbSet<Gesellschaftsspiel> Gesellschaftsspiele { get; set; }
     }

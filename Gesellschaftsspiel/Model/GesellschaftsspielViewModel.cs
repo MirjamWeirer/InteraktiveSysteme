@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Gesellschaftsspiele.Model
 {
-    class GesellschaftsspielViewModel : INotifyPropertyChanged
+    public class GesellschaftsspielViewModel : INotifyPropertyChanged
     {
         private ObservableCollection<Gesellschaftsspiel> _Gesellschaftspiele;
         private GesellschaftsspielRepository rep = new GesellschaftsspielRepository();

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Gesellschaftsspiele.Model
 {
-    class GesellschaftsspielRepository
+   public class GesellschaftsspielRepository
     {
         private GesellschaftsspielContext ctx = new GesellschaftsspielContext();
 
